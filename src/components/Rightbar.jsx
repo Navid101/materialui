@@ -1,4 +1,4 @@
-import { Avatar, AvatarGroup, Container, ImageList, ImageListItem, Typography } from '@mui/material'
+import { Avatar, AvatarGroup, Container, Typography } from '@mui/material'
 import { makeStyles } from '@mui/styles'
 import React from 'react'
 import Image from './Image'
