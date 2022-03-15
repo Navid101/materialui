@@ -24,7 +24,7 @@ const useStyles = makeStyles((theme)=>({
     search:{
         display: "flex",
         alignItems:"center",
-        justifyContent:"space-between",
+        // justifyContent:"space-between",
         backgroundColor: alpha(theme.palette.common.white, 0.15),
         '&:hover': {
           backgroundColor: alpha(theme.palette.common.white, 0.25),
@@ -32,7 +32,8 @@ const useStyles = makeStyles((theme)=>({
         borderRadius:theme.shape.borderRadius,
         width:"50%",
         [theme.breakpoints.down("sm")]:{
-            display: (props)=> (props.open? "flex" : "none")
+            display: (props)=> (props.open? "flex" : "none"),
+            justifyContent: "space-between"
         }
     },
     cancel:{
@@ -74,10 +75,10 @@ const Navbar = () => {
             <div className={classes.search}>
                 <Search></Search>
                 <InputBase placeholder='Search...' className={classes.input}></InputBase>
-                <Cancel className={classes.cancel} onClick={()=>setOpen(false)}></Cancel>
+                <Cancel className="cancel" onClick={()=>setOpen(false)}></Cancel>
             </div>
             <div className={classes.icons}>
-                <SearchOutlined className={classes.searchButton} onClick={()=>setOpen(true)}></SearchOutlined>
+                <SearchOutlined className="searchButton" onClick={()=>setOpen(true)}></SearchOutlined>
                 <Badge badgeContent={4} color="error">
                     <Mail></Mail>
                 </Badge>

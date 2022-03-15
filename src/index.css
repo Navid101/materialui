@@ -1,0 +1,19 @@
+.searchButton{
+    display: none !important;
+
+}
+
+
+.cancel{
+    display: none !important;
+}
+
+@media (max-width:600px) {
+    .searchButton{
+        display: block !important;
+    }
+
+    .cancel{
+        display: block !important;
+    }
+}
