@@ -1,23 +1,36 @@
-import logo from './logo.svg';
-import './App.css';
+import { Grid } from "@mui/material";
+// import { makeStyles } from "@mui/styles";
+import Leftbar from "./components/Leftbar";
+import Navbar from "./components/Navbar";
+import Feed from "./components/Feed";
+import Rightbar from "./components/Rightbar";
+
+// const useStyles = makeStyles(()=>({
+  
+//   container:{
+//     display: "flex",
+//     alignItems:"center",
+//     justifyContent:"center",
+//     flexDirection:"column"
+//   }
+// }))
 
 function App() {
+  // const classes = useStyles()
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+    <div >
+      <Navbar></Navbar>
+      <Grid container>
+        <Grid item sm={2}>
+          <Leftbar></Leftbar>
+        </Grid>
+        <Grid item sm={7}>
+          <Feed></Feed>
+        </Grid>
+        <Grid item sm={3}>
+          <Rightbar></Rightbar>
+        </Grid>
+      </Grid>
     </div>
   );
 }
